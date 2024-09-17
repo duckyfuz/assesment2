@@ -40,5 +40,5 @@ resource "aws_lambda_function_url" "lambda_url" {
 }
 
 output "lambda_url" {
-    value = aws_lambda_function_url.test_latest.function_url
+  value = aws_lambda_function_url.lambda_url.function_url
 }

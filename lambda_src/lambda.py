@@ -204,4 +204,4 @@ def lambda_handler(event, context):
             },
         },
     ]
-    return json.dumps(data)
+    return json.dumps(data, indent=2)

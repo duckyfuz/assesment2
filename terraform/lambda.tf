@@ -33,3 +33,12 @@ resource "aws_lambda_function" "assignment2_lambda" {
 
   runtime = "python3.11"
 }
+
+resource "aws_lambda_function_url" "lambda_url" {
+  function_name      = aws_lambda_function.assignment2_lambda.function_name
+  authorization_type = "NONE"
+}
+
+output "lambda_url" {
+    value = aws_lambda_function_url.test_latest.function_url
+}
